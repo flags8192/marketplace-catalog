@@ -17,7 +17,7 @@ import './style.css'
 function SlideImage(props) {
   const [index, setIndex] = useState(0)
 
-  const handleSelect = (selectedIndex, e) => {
+  const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex)
   }
 
@@ -154,7 +154,7 @@ class Catalog extends PureComponent {
                     <Image className="pic-1" src={`/images/${product.images[0].image}`} alt=""/>
                     <Image className="pic-2" src={`/images/${product.images[1].image}`} alt=""/>
                   </a>
-                  <ul className="social">
+                  <ul className="float-menu">
                     <li><a href="#" onClick={() => this.setState({ modalShow: true, product: product })}
                            data-tip="Быстрый просмотр"><FontAwesomeIcon icon={faSearch}/></a></li>
                     <li><a href="#" data-tip="Добавить в список покупок"><FontAwesomeIcon icon={faShoppingBag}/></a>

@@ -53,75 +53,75 @@ h3.h3 {
   opacity: 1
 }
 
-.product-grid .social {
-  width: 150px;
-  padding: 0;
-  margin: 0;
+.product-grid .float-menu {
+  left: 50%;
   list-style: none;
+  margin: 0;
   opacity: 0;
-  transform: translateY(-50%) translateX(-50%);
+  padding: 0;
   position: absolute;
   top: 60%;
-  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: all .3s ease 0s;
+  width: 150px;
   z-index: 1;
-  transition: all .3s ease 0s
 }
 
-.product-grid:hover .social {
+.product-grid:hover .float-menu {
   opacity: 1;
   top: 50%
 }
 
-.product-grid .social li {
+.product-grid .float-menu li {
   display: inline-block
 }
 
-.product-grid .social li a {
-  color: #fff;
+.product-grid .float-menu li a {
   background-color: #333;
-  font-size: 16px;
-  line-height: 40px;
-  text-align: center;
-  height: 40px;
-  width: 40px;
-  margin: 0 2px;
+  color: #fff;
   display: block;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 2px;
   position: relative;
-  transition: all .3s ease-in-out
+  text-align: center;
+  transition: all .3s ease-in-out;
+  width: 40px;
 }
 
-.product-grid .social li a:hover {
+.product-grid .float-menu li a:hover {
+  background-color: #ccc;
   color: #fff;
-  background-color: #ccc
 }
 
-.product-grid .social li a:after, .product-grid .social li a:before {
-  content: attr(data-tip);
-  color: #fff;
+.product-grid .float-menu li a:after, .product-grid .float-menu li a:before {
   background-color: #000;
+  color: #fff;
+  content: attr(data-tip);
   font-size: 12px;
+  left: 50%;
   letter-spacing: 1px;
   line-height: 20px;
-  padding: 1px 5px;
-  white-space: nowrap;
   opacity: 0;
-  transform: translateX(-50%);
+  padding: 1px 5px;
   position: absolute;
-  left: 50%;
-  top: -30px
+  top: -30px;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 
-.product-grid .social li a:after {
+.product-grid .float-menu li a:after {
+  border-radius: 0;
   content: '';
   height: 15px;
-  width: 15px;
-  border-radius: 0;
-  transform: translateX(-50%) rotate(45deg);
   top: -20px;
+  transform: translateX(-50%) rotate(45deg);
+  width: 15px;
   z-index: -1
 }
 
-.product-grid .social li a:hover:after, .product-grid .social li a:hover:before {
+.product-grid .float-menu li a:hover:after, .product-grid .float-menu li a:hover:before {
   opacity: 1
 }
 
